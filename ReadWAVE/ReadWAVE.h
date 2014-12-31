@@ -57,5 +57,6 @@ public:
 	FormatChunk GetFormat(){ return m_FormatChunk; };
 	unsigned short GetChannels(){ return m_FormatChunk.channels; };
 	unsigned long GetSamplerate(){ return m_FormatChunk.samplerate; };
+	unsigned long GetDataSize(){ return m_DataChunk.size; };
 };
 
