@@ -54,5 +54,8 @@ public:
 	int GetState(){ return State; };
 	//index‚ªƒƒ‚ƒŠŠO‚ğ‚³‚µ‚½ê‡-1‚ğ•Ô‚·
 	short GetWaveData(unsigned long index);
+	FormatChunk GetFormat(){ return m_FormatChunk; };
+	unsigned short GetChannels(){ return m_FormatChunk.channels; };
+	unsigned long GetSamplerate(){ return m_FormatChunk.samplerate; };
 };
 
