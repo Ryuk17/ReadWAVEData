@@ -57,3 +57,8 @@ short ReadWAVE::GetWaveData(unsigned long index)
 	return -1;
 
 }
+
+unsigned long ReadWAVE::GetSec()
+{
+	return m_DataChunk.size * 8 / (m_FormatChunk.bytepersec * 8 * 1000);
+}

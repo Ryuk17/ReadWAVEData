@@ -28,7 +28,7 @@ class ReadWAVE
 		unsigned short bitswidth;//サンプルあたりのビット数(bit/sample)
 	};
 	FormatChunk m_FormatChunk;
-
+	
 	struct FormatChunkEx {
 		FormatChunk formatChunk;
 		unsigned short extended_size;//拡張部分サイズ
@@ -58,5 +58,7 @@ public:
 	unsigned short GetChannels(){ return m_FormatChunk.channels; };
 	unsigned long GetSamplerate(){ return m_FormatChunk.samplerate; };
 	unsigned long GetDataSize(){ return m_DataChunk.size; };
+	unsigned long GetSec();
+
 };
 
