@@ -41,7 +41,7 @@ int ReadWAVE::LoadWAVEData(char *fileName)
 
 	waveformData = new short[m_DataChunk.size];
 
-	fread(waveformData, sizeof(short), m_DataChunk.size / sizeof(short), fp);
+	fread(waveformData, sizeof(short), m_DataChunk.size , fp);
 
 	fclose(fp);
 
